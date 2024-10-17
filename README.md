@@ -71,6 +71,49 @@ The test suite includes a variety of scenarios, including edge cases, to ensure 
 9. **Inputs that sum to exactly 0** - Ensures the function returns 0 when the sum of inputs is 0.
 10. **Sum of exactly 50** - Double-checks that 50 is returned when the sum is exactly 50.
 
+Here’s an improved version of your explanation using **Markdown**, making the content more structured and with 100% test coverage as requested.
+
+## Test Coverage
+
+To check test coverage of tests, run the following command:
+
+```bash
+npx jest --coverage
+```
+
+By default, jest creates a `coverage/` folder in the project directory, which contains a detailed HTML report. You can open it in your browser for a visual representation of the test coverage:
+
+- Open `coverage/lcov-report/index.html` in your browser.
+
+In this project, the function **`calculateBonus`** has two branches based on the condition `> 50` and `<= 50`. This logic is set on **line 4** of the `hw3_1.js` file. To ensure full coverage, tests should include both branches — one where the condition is greater than 50 and another where it is less than or equal to 50.
+
+### Test Coverage Result
+
+The test coverage for this project is **100%**, covering **all lines, branches, functions, and statements**.
+
+```text
+=============================== Coverage summary ===============================
+Statements   : 100% ( 5/5 )
+Branches     : 100% ( 2/2 )
+Functions    : 100% ( 1/1 )
+Lines        : 100% ( 5/5 )
+=================================================================================
+```
+
+### Difference Between Test Coverage of Functions, Branches, and Lines:
+
+1. **Functions Coverage**:
+   - **What it means**: Shows the percentage of functions (or methods) in the code that have been called at least once during the execution of the tests.
+   - **Important for**: Ensuring that every function in the code is tested at least once.
+
+2. **Branches Coverage**:
+   - **What it means**: Shows the percentage of code branches (such as `if-else` conditions, ternary operators, `switch` statements, or logical operators) that have been tested. 
+   - **Important for**: Ensuring that all possible execution paths are covered by tests.
+
+3. **Lines Coverage**:
+   - **What it means**: Shows the percentage of individual lines of code that have been executed during testing. This is a general measure to check whether every line of code was executed.
+   - **Important for**: Ensuring that every line of code has been run at least once during tests.
+
 ## Contact
 
 For any questions or issues, feel free to open an issue on the repository or contact the project maintainer:
